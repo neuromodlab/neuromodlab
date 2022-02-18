@@ -29,6 +29,13 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
 
+.contactcolumns{
+  width = 100%;
+  margin: auto auto;
+  display: grid;
+  grid-gap: 3rem;
+}
+
 body {
 	line-height: 1;
 }
@@ -98,7 +105,7 @@ input, select, textarea {
 	}
 
 	body, input, select, textarea {
-		color: rgba(255, 255, 255, 0.75);
+		color: black;
 		font-family: "Roboto", Helvetica, sans-serif;
 		font-size: 15pt;
 		font-weight: 100;
@@ -2255,7 +2262,7 @@ input, select, textarea {
 		input[type="email"]:focus,
 		select:focus,
 		textarea:focus {
-			border-color: #49D0EB;
+			border-color: #ffffff;
 		}
 
 	select {
@@ -2470,7 +2477,7 @@ input, select, textarea {
 			}
 
 		.icon.major {
-			background: #licht ;
+			background: #ffffff ;
 			border-radius: 100%;
 			cursor: default;
 			display: inline-block;
@@ -2510,7 +2517,6 @@ input, select, textarea {
 /* Image */
 
 	.image {
-		border-radius: 4px;
 		border: 0;
 		display: inline-block;
 		position: relative;
@@ -2530,7 +2536,6 @@ input, select, textarea {
 		}
 
 		.image img {
-			border-radius: 4px;
 			display: block;
 		}
 
@@ -2561,6 +2566,16 @@ input, select, textarea {
 		}
 
 			.image.fit img {
+				width: 100%;
+			}
+
+        .image.mid {
+			display: block;
+			margin: 2em auto 2em auto;
+			width: 50%;
+		}
+
+			.image.mid img {
 				width: 100%;
 			}
 
@@ -2832,10 +2847,10 @@ input, select, textarea {
 		-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 		-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-		background-color: #ffffff;
+		background-color: #f5f5f5;
 		border-radius: 4px;
 		border: 0;
-		box-shadow: inset 0 0 0 1px #ffffff;
+		box-shadow: inset 0 0 0 1px #f5f5f5;
 		color: #002A33 !important;
 		cursor: pointer;
 		display: inline-block;
@@ -3084,7 +3099,7 @@ input, select, textarea {
 			-webkit-transition: -webkit-transform 1s ease, opacity 1s ease;
 			-ms-transition: -ms-transform 1s ease, opacity 1s ease;
 			transition: transform 1s ease, opacity 1s ease;
-			background: rgba(255, 255, 255, .80);
+			background: rgba(250, 250, 250, .9);
 			border-style: solid;
 			opacity: 1;
 			position: absolute;
@@ -3140,15 +3155,15 @@ input, select, textarea {
 		}
 
 		.spotlight.style1 .content {
-			border-color: #ffffff;
+			border-color: #ff9933;
 		}
 
 		.spotlight.style2 .content {
-			border-color: #ffffff;
+			border-color: #ff9933;
 		}
 
 		.spotlight.style3 .content {
-			border-color: #ffffff;
+			border-color: #ff9933;
 		}
 
 		.spotlight.inactive .content {
@@ -3392,12 +3407,12 @@ input, select, textarea {
 			left: 1.25em;
 			line-height: inherit;
 			margin: 0;
-			position: absolute;
+			position: fixed;
 			top: 0;
 		}
 
 		#header nav {
-			position: absolute;
+			position: fixed;
 			right: 1em;
 			top: 0;
 		}
@@ -3447,7 +3462,7 @@ input, select, textarea {
 	body.landing #header {
 		background: rgba(255, 255, 255, 0.8);
 		box-shadow: .10;
-		position: absolute;
+		position: fixed;
 	}
 
 /* Banner */
@@ -3535,7 +3550,7 @@ input, select, textarea {
 /* Footer */
 
 	#footer {
-		background: #F5F5F5;
+		background: #f5f5f5;
 		padding: 6em 0;
 		text-align: center;
 	}
@@ -3593,6 +3608,9 @@ input, select, textarea {
 
 	@media screen and (max-width: 1680px) {
 
+        .contactcolumn { grid-template-columns: repeat(2, 1fr); }
+        
+        
 		/* Basic */
 
 			body, input, select, textarea {
@@ -3752,8 +3770,15 @@ input, select, textarea {
 		display: none;
 	}
 
-	@media screen and (max-width: 736px) {
 
+    /* Screen larger than 600px? 2 column */
+    @media screen and (min-width: 600px) {
+        .contactcolumns { grid-template-columns: 1fr 2.5fr; }
+    }
+
+	@media screen and (max-width: 736px) {
+            
+        
 		/* Basic */
 
 			html, body {
