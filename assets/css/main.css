@@ -3788,6 +3788,11 @@ input, select, textarea {
 			body, input, select, textarea {
 				font-size: 12pt;
 			}
+        
+        
+            body{
+                padding-top:50px;
+            }
 
 			h2 {
 				font-size: 1.5em;
