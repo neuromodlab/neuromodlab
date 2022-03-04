@@ -107,7 +107,7 @@ input, select, textarea {
 	body, input, select, textarea {
 		color: black;
 		font-family: "Roboto", Helvetica, sans-serif;
-		font-size: 15pt;
+		font-size: 12pt;
 		font-weight: 100;
 		line-height: 1.75em;
 	}
@@ -241,6 +241,16 @@ input, select, textarea {
 	.align-right {
 		text-align: right;
 	}
+
+    .news{
+        display: inline-block;
+        padding: 25px 25px 25px 20px;
+    }
+
+    .new{
+        background-color: #f5f5f5; 
+        padding: 25px 25px 25px 20px;
+    }
 
 /* Loader */
 
@@ -2552,7 +2562,7 @@ input, select, textarea {
 		}
 
 		.image.left, .image.right {
-			max-width: 40%;
+			width: 40%;
 		}
 
 			.image.left img, .image.right img {
@@ -3778,6 +3788,9 @@ input, select, textarea {
 
 	@media screen and (max-width: 736px) {
             
+        .image.mid, .image.left, .image.right {
+			width: 100%;
+        }
         
 		/* Basic */
 
