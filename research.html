@@ -18,7 +18,14 @@
 		<div id="page-wrapper">
 
 			<!-- Header -->
-            <div w3-include-html="header.html"></div>
+<!--            <div w3-include-html="header.html"></div>-->
+<!--            <include src="./nav.html"></include>-->
+            <script src="assets/js/jquery.js"></script> 
+            <script> 
+            $(function(){
+              $("#includedContent").load("header.html"); 
+            });
+            </script>
              
 			<!-- Main -->
             <div id="main" class="wrapper style1">
@@ -78,6 +85,7 @@
 		</div>   
 
 		<!-- Scripts --> 
+<!--            <script src="https://unpkg.com/htmlincludejs"></script>-->
             <script src="assets/js/modalcode.js"></script>
             <script src="assets/js/inclhtml.js"></script>
 			<script src="assets/js/jquery.min.js"></script>
