@@ -1,0 +1,162 @@
+/* Globals */
+
+ul {
+    list-style-type: none;
+}
+
+.titleorange {
+  color: #553d8e;
+}
+
+/* Utilities */
+/*
+.auto-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(var(--auto-grid-min-size, 35rem), 2fr)
+  );
+  grid-gap: var(--auto-grid-gap, 1em);
+  padding: 0;
+}
+*/
+
+/*
+.flow > * + * {
+  margin-top: var(--flow-space, 2em);
+}
+*/
+
+/* Composition */
+/*
+.team {
+  --flow-space: 2em;
+}
+*/
+
+/* Blocks */
+.profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  aspect-ratio: 5/1;
+  position: relative;
+/*  padding: 0;*/
+  color: white;
+  backface-visibility: hidden;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/*
+  background: linear-gradient(
+    45deg,
+    hsl(0 100% 0% / 0.9) 0,
+    hsl(0 100% 0% / 0.2) 80%
+  );
+*/
+
+
+.profile::before,
+.profile::after {
+/*  background: linear-gradient(45deg, blue, red);*/
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  top: 0;
+  left: 0;
+}
+
+
+.profile::after {
+  background: linear-gradient(135deg, rgba(0,0,0,0.7), rgba(255,255,255,0.8));
+  opacity: 0.4;
+  transition: 300ms opacity linear;
+}
+
+
+
+.profile > * {
+  z-index: 1;
+}
+
+.profile img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  z-index: 0;
+  object-fit: cover;
+/*  filter: grayscale(1);*/
+  transition: filter 200ms ease, transform 250ms linear;
+}
+
+.profile h2,
+.profile p {
+/*  transform: translateY(2ex);*/
+}
+
+.profile h2 {
+  color: black;
+  font-size: 1.6rem;
+/*  line-height: 1.2;*/
+  font-weight: 600;
+/*  letter-spacing: 0.23ch;*/
+  transition: 300ms transform ease;
+}
+
+.profile p {
+  opacity: 0;
+}
+
+.profile:focus {
+  outline: 0.5rem solid white;
+  outline-offset: -0.5rem;
+}
+
+.profile:hover :is(h2, p),
+.profile:focus :is(h2, p) {
+  transform: none;
+}
+
+.profile:hover::after,
+.profile:focus::after,
+.profile:hover::before,
+.profile:focus::before {
+  background: linear-gradient(135deg, rgba(0,0,0,0.7), rgba(255,255,255,0.5));
+  opacity: 0.8;
+}
+
+.profile:hover img,
+.profile:focus img {
+  transform: scale(1.10) rotate(0deg);
+}
+
+.gallerybutton {
+/*  background-color: rgba(5,0,15,0.8);*/
+  background-color: rgba(250,250,250,0.9);
+  width: 101%;
+  border: none;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+
+/* Display the columns below each other instead of side by side on small screens */
+@media screen and (max-width: 936px) {
+
+.profile h2 {
+  font-size: 0.9rem;
+}
+.gallerybutton {
+  padding: 10px;
+}
+    
+}
