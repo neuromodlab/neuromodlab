@@ -1,6 +1,6 @@
-# Neuromodlab website
+# Verhagen Lab website
 
-Welcome to the Neuromodlab website at Radboud University, hosted by GitHub Pages.
+Welcome to the Verhagen Lab website at Radboud University, hosted by GitHub Pages.
 <div align="center">
   <img src="images/index1.jpg">
 </div>
