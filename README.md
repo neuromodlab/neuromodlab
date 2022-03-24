@@ -2,7 +2,7 @@
 
 Welcome to the Verhagen Lab website at Radboud University, hosted by GitHub Pages.
 <div align="center">
-  <img src="images/index1.jpg">
+  <img src="neuromodlab/images/index1.jpg">
 </div>
 
 ## Usage
