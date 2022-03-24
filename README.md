@@ -70,7 +70,7 @@ To add a title, use a header tag
 
 To add an image, add:
 ```bash
-<img src="[file]" class="image right"/>
+<img src="[file]"/>
 ```
 The file can be a link to an image online or a relative path, for example "images/index1.jpg"
 
