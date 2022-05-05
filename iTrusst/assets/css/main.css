@@ -151,6 +151,11 @@ input, select, textarea {
 			color: black;
 			border: 0;
 		}
+	h1 {
+		font-size: 2.75em;
+		line-height: 1;
+	}
+
 
 	h2 {
 		font-size: 2em;
