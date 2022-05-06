@@ -2873,10 +2873,10 @@ input, select, textarea {
 		-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 		-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-		background-color: #002A33;
+		background-color: #6E5295;
 		border-radius: 4px;
 		border: 0;
-		box-shadow: inset 0 0 0 1px #002A33;
+		box-shadow: inset 0 0 0 1px #6E5295;
 		color: white !important;
 		cursor: pointer;
 		display: inline-block;
