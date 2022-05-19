@@ -102,8 +102,7 @@ ul {
 }
 
 .profile h2 {
-  color: black;
-  font-size: 1.6rem;
+/*  font-size: 1.6rem;*/
 /*  line-height: 1.2;*/
   font-weight: 600;
 /*  letter-spacing: 0.23ch;*/
@@ -140,23 +139,41 @@ ul {
 .gallerybutton {
 /*  background-color: rgba(5,0,15,0.8);*/
   background-color: rgba(250,250,250,0.9);
+  color: black;
   width: 101%;
   border: none;
   padding: 15px;
   text-align: center;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 1.6rem;
+}
+
+.gallerybuttoncredits {
+  color: white;
+  width: 101%;
+  border: none;
+  padding-right: 20px;
+  text-align: right;
+  text-decoration: none;
+  font-size: 1rem;
+  opacity:0;
+}
+
+.profile:hover .gallerybuttoncredits{
+  opacity: 1;
 }
 
 
 /* Display the columns below each other instead of side by side on small screens */
 @media screen and (max-width: 936px) {
 
-.profile h2 {
-  font-size: 0.9rem;
-}
 .gallerybutton {
   padding: 10px;
+  font-size: 0.9rem;
+}
+    
+.gallerybuttoncredits {
+  font-size: 0.6rem;
 }
     
 }
